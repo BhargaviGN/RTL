@@ -1,0 +1,41 @@
+$date
+	Tue Jun 13 20:49:26 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module async_tb $end
+$var wire 4 ! count [3:0] $end
+$var reg 1 " UpOrDown $end
+$var reg 1 # clk $end
+$var reg 1 $ rst $end
+$scope module as $end
+$var wire 1 " UpOrDown $end
+$var wire 1 # clk $end
+$var wire 1 $ rst $end
+$var reg 4 % count [3:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 %
+0$
+0#
+x"
+b0 !
+$end
+#5
+1#
+#10
+0#
+#15
+1#
+#20
+0#

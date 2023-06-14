@@ -1,0 +1,78 @@
+$date
+	Tue Jun 13 16:29:10 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module bcd_to_excess3_tb $end
+$var wire 4 ! e [3:0] $end
+$var reg 4 " b [3:0] $end
+$scope module be $end
+$var wire 4 # b [3:0] $end
+$var wire 4 $ e [3:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+bx $
+bx #
+bx "
+bx !
+$end
+#1
+b11 !
+b11 $
+b0 "
+b0 #
+#2
+b100 !
+b100 $
+b1 "
+b1 #
+#3
+b101 !
+b101 $
+b10 "
+b10 #
+#4
+b110 !
+b110 $
+b11 "
+b11 #
+#5
+b111 !
+b111 $
+b100 "
+b100 #
+#6
+b1000 !
+b1000 $
+b101 "
+b101 #
+#7
+b1010 !
+b1010 $
+b111 "
+b111 #
+#8
+b1011 !
+b1011 $
+b1000 "
+b1000 #
+#9
+b1100 !
+b1100 $
+b1001 "
+b1001 #
+#10
+b11 !
+b11 $
+b0 "
+b0 #

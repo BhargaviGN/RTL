@@ -1,0 +1,59 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_000001eee02654c0 .scope module, "half_adder_tb" "half_adder_tb" 2 2;
+ .timescale 0 0;
+v000001eee02657e0_0 .var "a", 0 0;
+v000001eee0265880_0 .var "b", 0 0;
+v000001eee01fbb90_0 .net "cout", 0 0, L_000001eee01f6790;  1 drivers
+v000001eee01fbc30_0 .net "s", 0 0, L_000001eee01feee0;  1 drivers
+S_000001eee0265650 .scope module, "ha" "half_adder" 2 5, 3 1 0, S_000001eee02654c0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /OUTPUT 1 "s";
+    .port_info 3 /OUTPUT 1 "cout";
+L_000001eee01feee0 .functor XOR 1, v000001eee02657e0_0, v000001eee0265880_0, C4<0>, C4<0>;
+L_000001eee01f6790 .functor AND 1, v000001eee02657e0_0, v000001eee0265880_0, C4<1>, C4<1>;
+v000001eee01f69b0_0 .net "a", 0 0, v000001eee02657e0_0;  1 drivers
+v000001eee01f6530_0 .net "b", 0 0, v000001eee0265880_0;  1 drivers
+v000001eee01f88c0_0 .net "cout", 0 0, L_000001eee01f6790;  alias, 1 drivers
+v000001eee01fee40_0 .net "s", 0 0, L_000001eee01feee0;  alias, 1 drivers
+    .scope S_000001eee02654c0;
+T_0 ;
+    %vpi_call 2 7 "$dumpfile", "half_adder.vcd" {0 0 0};
+    %vpi_call 2 8 "$dumpvars", 32'sb00000000000000000000000000000000, S_000001eee02654c0 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001eee02657e0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001eee0265880_0, 0, 1;
+    %delay 2, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001eee02657e0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001eee0265880_0, 0, 1;
+    %delay 2, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001eee02657e0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001eee0265880_0, 0, 1;
+    %delay 2, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001eee02657e0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001eee0265880_0, 0, 1;
+    %delay 2, 0;
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "half_adder_tb.v";
+    "./half_adder.v";

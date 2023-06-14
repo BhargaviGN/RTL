@@ -1,0 +1,58 @@
+$date
+	Sun Jun 11 15:00:54 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module enc8to3_tb $end
+$var wire 3 ! y [2:0] $end
+$var reg 1 " en $end
+$var reg 8 # in [7:0] $end
+$scope module ens $end
+$var wire 1 " en $end
+$var wire 8 $ in [7:0] $end
+$var reg 3 % y [2:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+bx %
+b1100100 $
+b1100100 #
+0"
+bx !
+$end
+#2
+b100 !
+b100 %
+b10000 #
+b10000 $
+1"
+#4
+bz !
+bz %
+b0 #
+b0 $
+#6
+b111 !
+b111 %
+b10000000 #
+b10000000 $
+#8
+bz !
+bz %
+b1010 #
+b1010 $
+#10
+b10100000 #
+b10100000 $
+#12
+b10100100 #
+b10100100 $

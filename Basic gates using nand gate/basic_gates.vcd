@@ -1,0 +1,59 @@
+$date
+	Tue Jun 13 12:53:07 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module basic_gates_tb $end
+$var wire 8 ! y [7:0] $end
+$var reg 1 " a $end
+$var reg 1 # b $end
+$scope module ba $end
+$var wire 1 " a $end
+$var wire 1 # b $end
+$var wire 1 $ w1 $end
+$var wire 1 % w2 $end
+$var wire 8 & y [7:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+bx &
+x%
+x$
+x#
+x"
+bx !
+$end
+#1
+1%
+b10100111 !
+b10100111 &
+1$
+0#
+0"
+#2
+b1010101 !
+b1010101 &
+0%
+1#
+#3
+1%
+b1010110 !
+b1010110 &
+0$
+0#
+1"
+#4
+1$
+b10011000 !
+b10011000 &
+1%
+1#

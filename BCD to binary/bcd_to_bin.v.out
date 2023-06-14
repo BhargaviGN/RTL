@@ -1,0 +1,46 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_000001fa27016070 .scope module, "bcd_to_bin" "bcd_to_bin" 2 1;
+ .timescale 0 0;
+    .port_info 0 /INPUT 8 "bcd";
+    .port_info 1 /OUTPUT 4 "bin";
+L_000001fa2701ed50 .functor XOR 1, L_000001fa26f43340, L_000001fa26f42800, C4<0>, C4<0>;
+L_000001fa2701edc0 .functor AND 1, L_000001fa26f42e40, L_000001fa26f428a0, C4<1>, C4<1>;
+L_000001fa2701ee30 .functor OR 1, L_000001fa26f429e0, L_000001fa2701edc0, C4<0>, C4<0>;
+L_000001fa26f437c0 .functor OR 1, L_000001fa26f42ee0, L_000001fa26f42b20, C4<0>, C4<0>;
+v000001fa27016840_0 .net *"_ivl_10", 0 0, L_000001fa2701ed50;  1 drivers
+v000001fa27016200_0 .net *"_ivl_15", 0 0, L_000001fa26f429e0;  1 drivers
+v000001fa270162a0_0 .net *"_ivl_17", 0 0, L_000001fa26f42e40;  1 drivers
+v000001fa27016340_0 .net *"_ivl_19", 0 0, L_000001fa26f428a0;  1 drivers
+v000001fa270163e0_0 .net *"_ivl_20", 0 0, L_000001fa2701edc0;  1 drivers
+v000001fa2701ea30_0 .net *"_ivl_22", 0 0, L_000001fa2701ee30;  1 drivers
+v000001fa2701ead0_0 .net *"_ivl_28", 0 0, L_000001fa26f42ee0;  1 drivers
+v000001fa2701eb70_0 .net *"_ivl_3", 0 0, L_000001fa26f43160;  1 drivers
+v000001fa2701ec10_0 .net *"_ivl_30", 0 0, L_000001fa26f42b20;  1 drivers
+v000001fa2701ecb0_0 .net *"_ivl_31", 0 0, L_000001fa26f437c0;  1 drivers
+v000001fa26f42a80_0 .net *"_ivl_7", 0 0, L_000001fa26f43340;  1 drivers
+v000001fa26f42940_0 .net *"_ivl_9", 0 0, L_000001fa26f42800;  1 drivers
+o000001fa26f47218 .functor BUFZ 8, C4<zzzzzzzz>; HiZ drive
+v000001fa26f42da0_0 .net "bcd", 7 0, o000001fa26f47218;  0 drivers
+v000001fa26f42c60_0 .net "bin", 3 0, L_000001fa26f42d00;  1 drivers
+L_000001fa26f43160 .part o000001fa26f47218, 0, 1;
+L_000001fa26f43340 .part o000001fa26f47218, 1, 1;
+L_000001fa26f42800 .part o000001fa26f47218, 4, 1;
+L_000001fa26f429e0 .part o000001fa26f47218, 2, 1;
+L_000001fa26f42e40 .part o000001fa26f47218, 4, 1;
+L_000001fa26f428a0 .part o000001fa26f47218, 1, 1;
+L_000001fa26f42d00 .concat8 [ 1 1 1 1], L_000001fa26f43160, L_000001fa2701ed50, L_000001fa2701ee30, L_000001fa26f437c0;
+L_000001fa26f42ee0 .part o000001fa26f47218, 3, 1;
+L_000001fa26f42b20 .part o000001fa26f47218, 4, 1;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "bcd_to_bin.v";

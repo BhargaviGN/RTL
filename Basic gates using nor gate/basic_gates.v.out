@@ -1,0 +1,67 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_0000026295c2bcd0 .scope module, "basic_gates" "basic_gates" 2 1;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /OUTPUT 8 "y";
+o0000026295ab7338 .functor BUFZ 1, C4<z>; HiZ drive
+L_0000026295c26be0 .functor NOR 1, o0000026295ab7338, o0000026295ab7338, C4<0>, C4<0>;
+o0000026295ab7368 .functor BUFZ 1, C4<z>; HiZ drive
+L_0000026295c26740 .functor NOR 1, o0000026295ab7368, o0000026295ab7368, C4<0>, C4<0>;
+L_0000026295c269a0 .functor NOR 1, o0000026295ab7338, o0000026295ab7368, C4<0>, C4<0>;
+L_0000026295c28dd0 .functor NOR 1, L_0000026295afccf0, L_0000026295afcc50, C4<0>, C4<0>;
+L_0000026295c2e800 .functor NOR 1, L_0000026295afdab0, L_0000026295afc1b0, C4<0>, C4<0>;
+L_0000026295ab2cb0 .functor NOR 1, L_0000026295afcf70, L_0000026295afc6b0, C4<0>, C4<0>;
+L_0000026295ab2fc0 .functor NOR 1, o0000026295ab7338, L_0000026295afd1f0, C4<0>, C4<0>;
+L_0000026295ab2e00 .functor NOR 1, o0000026295ab7368, L_0000026295afc430, C4<0>, C4<0>;
+L_0000026295ab2c40 .functor NOR 1, L_0000026295ab2fc0, L_0000026295ab2e00, C4<0>, C4<0>;
+L_0000026295ab2d90 .functor NOR 1, L_0000026295afd470, L_0000026295afd290, C4<0>, C4<0>;
+v0000026295c2a6b0_0 .net *"_ivl_1", 0 0, L_0000026295c26be0;  1 drivers
+v0000026295c2a1b0_0 .net *"_ivl_10", 0 0, L_0000026295c28dd0;  1 drivers
+v0000026295c29c10_0 .net *"_ivl_13", 0 0, L_0000026295afccf0;  1 drivers
+v0000026295c29e90_0 .net *"_ivl_15", 0 0, L_0000026295afcc50;  1 drivers
+v0000026295c2a750_0 .net *"_ivl_17", 0 0, L_0000026295c2e800;  1 drivers
+v0000026295c2a7f0_0 .net *"_ivl_20", 0 0, L_0000026295afdab0;  1 drivers
+v0000026295c29fd0_0 .net *"_ivl_22", 0 0, L_0000026295afc1b0;  1 drivers
+v0000026295c2a070_0 .net *"_ivl_24", 0 0, L_0000026295ab2cb0;  1 drivers
+v0000026295c2a930_0 .net *"_ivl_27", 0 0, L_0000026295afcf70;  1 drivers
+v0000026295c29cb0_0 .net *"_ivl_29", 0 0, L_0000026295afc6b0;  1 drivers
+v0000026295c2a110_0 .net *"_ivl_32", 0 0, L_0000026295afd1f0;  1 drivers
+v0000026295c2a9d0_0 .net *"_ivl_35", 0 0, L_0000026295afc430;  1 drivers
+v0000026295c2a250_0 .net *"_ivl_37", 0 0, L_0000026295ab2c40;  1 drivers
+v0000026295c29ad0_0 .net *"_ivl_4", 0 0, L_0000026295c26740;  1 drivers
+v0000026295c29d50_0 .net *"_ivl_40", 0 0, L_0000026295ab2d90;  1 drivers
+v0000026295c2a2f0_0 .net *"_ivl_44", 0 0, L_0000026295afd470;  1 drivers
+v0000026295afd5b0_0 .net *"_ivl_46", 0 0, L_0000026295afd290;  1 drivers
+v0000026295afda10_0 .net *"_ivl_7", 0 0, L_0000026295c269a0;  1 drivers
+v0000026295afce30_0 .net "a", 0 0, o0000026295ab7338;  0 drivers
+v0000026295afc4d0_0 .net "b", 0 0, o0000026295ab7368;  0 drivers
+v0000026295afc070_0 .net "w1", 0 0, L_0000026295ab2fc0;  1 drivers
+v0000026295afc110_0 .net "w2", 0 0, L_0000026295ab2e00;  1 drivers
+v0000026295afd150_0 .net "y", 7 0, L_0000026295afced0;  1 drivers
+L_0000026295afccf0 .part L_0000026295afced0, 2, 1;
+L_0000026295afcc50 .part L_0000026295afced0, 2, 1;
+L_0000026295afdab0 .part L_0000026295afced0, 0, 1;
+L_0000026295afc1b0 .part L_0000026295afced0, 1, 1;
+L_0000026295afcf70 .part L_0000026295afced0, 4, 1;
+L_0000026295afc6b0 .part L_0000026295afced0, 4, 1;
+L_0000026295afd1f0 .part L_0000026295afced0, 2, 1;
+L_0000026295afc430 .part L_0000026295afced0, 2, 1;
+LS_0000026295afced0_0_0 .concat8 [ 1 1 1 1], L_0000026295c26be0, L_0000026295c26740, L_0000026295c269a0, L_0000026295c28dd0;
+LS_0000026295afced0_0_4 .concat8 [ 1 1 1 1], L_0000026295c2e800, L_0000026295ab2cb0, L_0000026295ab2c40, L_0000026295ab2d90;
+L_0000026295afced0 .concat8 [ 4 4 0 0], LS_0000026295afced0_0_0, LS_0000026295afced0_0_4;
+L_0000026295afd470 .part L_0000026295afced0, 6, 1;
+L_0000026295afd290 .part L_0000026295afced0, 6, 1;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "basic_gates.v";

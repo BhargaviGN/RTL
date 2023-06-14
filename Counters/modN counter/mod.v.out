@@ -1,0 +1,52 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_000001abea746180 .scope module, "mod" "mod" 2 1;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "clk";
+    .port_info 1 /INPUT 1 "rst";
+    .port_info 2 /OUTPUT 3 "q";
+P_000001abea7468f0 .param/l "N" 0 2 4, +C4<00000000000000000000000000001000>;
+P_000001abea746928 .param/l "WIDTH" 0 2 5, +C4<00000000000000000000000000000011>;
+o000001abea796f98 .functor BUFZ 1, C4<z>; HiZ drive
+v000001abea7466b0_0 .net "clk", 0 0, o000001abea796f98;  0 drivers
+v000001abea746310_0 .var "q", 2 0;
+o000001abea796ff8 .functor BUFZ 1, C4<z>; HiZ drive
+v000001abea7463b0_0 .net "rst", 0 0, o000001abea796ff8;  0 drivers
+E_000001abea747f80 .event posedge, v000001abea7466b0_0;
+    .scope S_000001abea746180;
+T_0 ;
+    %wait E_000001abea747f80;
+    %load/vec4 v000001abea7463b0_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_0.0, 8;
+    %pushi/vec4 0, 0, 3;
+    %store/vec4 v000001abea746310_0, 0, 3;
+    %jmp T_0.1;
+T_0.0 ;
+    %load/vec4 v000001abea746310_0;
+    %pad/u 32;
+    %cmpi/e 7, 0, 32;
+    %jmp/0xz  T_0.2, 4;
+    %pushi/vec4 0, 0, 3;
+    %store/vec4 v000001abea746310_0, 0, 3;
+    %jmp T_0.3;
+T_0.2 ;
+    %load/vec4 v000001abea746310_0;
+    %addi 1, 0, 3;
+    %store/vec4 v000001abea746310_0, 0, 3;
+T_0.3 ;
+T_0.1 ;
+    %jmp T_0;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "mod.v";

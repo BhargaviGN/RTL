@@ -1,0 +1,96 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_000001fa5bb16180 .scope module, "bcd_to_excess3" "bcd_to_excess3" 2 1;
+ .timescale 0 0;
+    .port_info 0 /INPUT 4 "b";
+    .port_info 1 /OUTPUT 4 "e";
+L_000001fa5bb16840 .functor NOT 1, L_000001fa5baa04b0, C4<0>, C4<0>, C4<0>;
+L_000001fa5bb1d810 .functor AND 1, L_000001fa5baa1ef0, L_000001fa5baa13b0, C4<1>, C4<1>;
+L_000001fa5ba54430 .functor NOT 1, L_000001fa5baa0690, C4<0>, C4<0>, C4<0>;
+L_000001fa5ba54200 .functor NOT 1, L_000001fa5baa0730, C4<0>, C4<0>, C4<0>;
+L_000001fa5ba543c0 .functor AND 1, L_000001fa5ba54430, L_000001fa5ba54200, C4<1>, C4<1>;
+L_000001fa5ba54350 .functor OR 1, L_000001fa5bb1d810, L_000001fa5ba543c0, C4<0>, C4<0>;
+L_000001fa5ba54660 .functor NOT 1, L_000001fa5baa0870, C4<0>, C4<0>, C4<0>;
+L_000001fa5ba544a0 .functor AND 1, L_000001fa5ba54660, L_000001fa5baa1090, C4<1>, C4<1>;
+L_000001fa5ba54510 .functor NOT 1, L_000001fa5baa0910, C4<0>, C4<0>, C4<0>;
+L_000001fa5ba54580 .functor AND 1, L_000001fa5ba54510, L_000001fa5baa0f50, C4<1>, C4<1>;
+L_000001fa5ba54190 .functor OR 1, L_000001fa5ba544a0, L_000001fa5ba54580, C4<0>, C4<0>;
+L_000001fa5ba540b0 .functor NOT 1, L_000001fa5baa0d70, C4<0>, C4<0>, C4<0>;
+L_000001fa5ba545f0 .functor AND 1, L_000001fa5baa09b0, L_000001fa5ba540b0, C4<1>, C4<1>;
+L_000001fa5ba54270 .functor NOT 1, L_000001fa5baa0e10, C4<0>, C4<0>, C4<0>;
+L_000001fa5ba53fd0 .functor AND 1, L_000001fa5ba545f0, L_000001fa5ba54270, C4<1>, C4<1>;
+L_000001fa5ba54040 .functor OR 1, L_000001fa5ba54190, L_000001fa5ba53fd0, C4<0>, C4<0>;
+L_000001fa5ba53f60 .functor AND 1, L_000001fa5baa4e60, L_000001fa5baa41e0, C4<1>, C4<1>;
+L_000001fa5ba542e0 .functor OR 1, L_000001fa5baa4960, L_000001fa5ba53f60, C4<0>, C4<0>;
+L_000001fa5ba54120 .functor AND 1, L_000001fa5baa3f60, L_000001fa5baa5220, C4<1>, C4<1>;
+L_000001fa5baa5f90 .functor OR 1, L_000001fa5ba542e0, L_000001fa5ba54120, C4<0>, C4<0>;
+v000001fa5ba46500_0 .net *"_ivl_11", 0 0, L_000001fa5baa13b0;  1 drivers
+v000001fa5ba46780_0 .net *"_ivl_12", 0 0, L_000001fa5bb1d810;  1 drivers
+v000001fa5baa14f0_0 .net *"_ivl_15", 0 0, L_000001fa5baa0690;  1 drivers
+v000001fa5baa0af0_0 .net *"_ivl_16", 0 0, L_000001fa5ba54430;  1 drivers
+v000001fa5baa1590_0 .net *"_ivl_19", 0 0, L_000001fa5baa0730;  1 drivers
+v000001fa5baa0230_0 .net *"_ivl_20", 0 0, L_000001fa5ba54200;  1 drivers
+v000001fa5baa0370_0 .net *"_ivl_22", 0 0, L_000001fa5ba543c0;  1 drivers
+v000001fa5baa1810_0 .net *"_ivl_24", 0 0, L_000001fa5ba54350;  1 drivers
+v000001fa5baa1630_0 .net *"_ivl_29", 0 0, L_000001fa5baa0870;  1 drivers
+v000001fa5baa1270_0 .net *"_ivl_3", 0 0, L_000001fa5baa04b0;  1 drivers
+v000001fa5baa1770_0 .net *"_ivl_30", 0 0, L_000001fa5ba54660;  1 drivers
+v000001fa5baa0050_0 .net *"_ivl_33", 0 0, L_000001fa5baa1090;  1 drivers
+v000001fa5baa00f0_0 .net *"_ivl_34", 0 0, L_000001fa5ba544a0;  1 drivers
+v000001fa5baa1130_0 .net *"_ivl_37", 0 0, L_000001fa5baa0910;  1 drivers
+v000001fa5baa05f0_0 .net *"_ivl_38", 0 0, L_000001fa5ba54510;  1 drivers
+v000001fa5baa1e50_0 .net *"_ivl_4", 0 0, L_000001fa5bb16840;  1 drivers
+v000001fa5baa0eb0_0 .net *"_ivl_41", 0 0, L_000001fa5baa0f50;  1 drivers
+v000001fa5baa19f0_0 .net *"_ivl_42", 0 0, L_000001fa5ba54580;  1 drivers
+v000001fa5baa0c30_0 .net *"_ivl_44", 0 0, L_000001fa5ba54190;  1 drivers
+v000001fa5baa18b0_0 .net *"_ivl_47", 0 0, L_000001fa5baa09b0;  1 drivers
+v000001fa5baa1950_0 .net *"_ivl_49", 0 0, L_000001fa5baa0d70;  1 drivers
+v000001fa5baa02d0_0 .net *"_ivl_50", 0 0, L_000001fa5ba540b0;  1 drivers
+v000001fa5baa1a90_0 .net *"_ivl_52", 0 0, L_000001fa5ba545f0;  1 drivers
+v000001fa5baa07d0_0 .net *"_ivl_55", 0 0, L_000001fa5baa0e10;  1 drivers
+v000001fa5baa1b30_0 .net *"_ivl_56", 0 0, L_000001fa5ba54270;  1 drivers
+v000001fa5baa0b90_0 .net *"_ivl_58", 0 0, L_000001fa5ba53fd0;  1 drivers
+v000001fa5baa11d0_0 .net *"_ivl_60", 0 0, L_000001fa5ba54040;  1 drivers
+v000001fa5baa0cd0_0 .net *"_ivl_66", 0 0, L_000001fa5baa4960;  1 drivers
+v000001fa5baa1bd0_0 .net *"_ivl_68", 0 0, L_000001fa5baa4e60;  1 drivers
+v000001fa5baa16d0_0 .net *"_ivl_70", 0 0, L_000001fa5baa41e0;  1 drivers
+v000001fa5baa0550_0 .net *"_ivl_71", 0 0, L_000001fa5ba53f60;  1 drivers
+v000001fa5baa1450_0 .net *"_ivl_73", 0 0, L_000001fa5ba542e0;  1 drivers
+v000001fa5baa1c70_0 .net *"_ivl_76", 0 0, L_000001fa5baa3f60;  1 drivers
+v000001fa5baa0190_0 .net *"_ivl_78", 0 0, L_000001fa5baa5220;  1 drivers
+v000001fa5baa0410_0 .net *"_ivl_79", 0 0, L_000001fa5ba54120;  1 drivers
+v000001fa5baa1310_0 .net *"_ivl_81", 0 0, L_000001fa5baa5f90;  1 drivers
+v000001fa5baa0a50_0 .net *"_ivl_9", 0 0, L_000001fa5baa1ef0;  1 drivers
+o000001fa5ba57678 .functor BUFZ 4, C4<zzzz>; HiZ drive
+v000001fa5baa1d10_0 .net "b", 3 0, o000001fa5ba57678;  0 drivers
+v000001fa5baa1db0_0 .net "e", 3 0, L_000001fa5baa0ff0;  1 drivers
+L_000001fa5baa04b0 .part o000001fa5ba57678, 0, 1;
+L_000001fa5baa1ef0 .part o000001fa5ba57678, 1, 1;
+L_000001fa5baa13b0 .part o000001fa5ba57678, 0, 1;
+L_000001fa5baa0690 .part o000001fa5ba57678, 1, 1;
+L_000001fa5baa0730 .part o000001fa5ba57678, 0, 1;
+L_000001fa5baa0870 .part o000001fa5ba57678, 2, 1;
+L_000001fa5baa1090 .part o000001fa5ba57678, 1, 1;
+L_000001fa5baa0910 .part o000001fa5ba57678, 2, 1;
+L_000001fa5baa0f50 .part o000001fa5ba57678, 0, 1;
+L_000001fa5baa09b0 .part o000001fa5ba57678, 2, 1;
+L_000001fa5baa0d70 .part o000001fa5ba57678, 1, 1;
+L_000001fa5baa0e10 .part o000001fa5ba57678, 0, 1;
+L_000001fa5baa0ff0 .concat8 [ 1 1 1 1], L_000001fa5bb16840, L_000001fa5ba54350, L_000001fa5ba54040, L_000001fa5baa5f90;
+L_000001fa5baa4960 .part o000001fa5ba57678, 3, 1;
+L_000001fa5baa4e60 .part o000001fa5ba57678, 2, 1;
+L_000001fa5baa41e0 .part o000001fa5ba57678, 1, 1;
+L_000001fa5baa3f60 .part o000001fa5ba57678, 2, 1;
+L_000001fa5baa5220 .part o000001fa5ba57678, 0, 1;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "bcd_to_excess3.v";

@@ -1,0 +1,47 @@
+$date
+	Tue Jun 13 16:55:13 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module srl_tb $end
+$var wire 1 ! q $end
+$var wire 1 " en $end
+$var reg 1 # r $end
+$var reg 1 $ s $end
+$scope module s1 $end
+$var wire 1 " q $end
+$var wire 1 ! qbar $end
+$var wire 1 # r $end
+$var wire 1 $ s $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+x$
+x#
+x"
+x!
+$end
+#2
+0#
+0$
+#4
+1!
+0"
+1#
+#6
+1"
+0!
+0#
+1$
+#8
+0"
+1#

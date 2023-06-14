@@ -1,0 +1,53 @@
+$date
+	Sun Jun 11 13:45:33 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module demux1to8_tb $end
+$var wire 8 ! y [7:0] $end
+$var reg 1 " in $end
+$var reg 3 # sel [2:0] $end
+$scope module dm $end
+$var wire 1 " in $end
+$var wire 3 $ sel [2:0] $end
+$var reg 8 % y [7:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b10000000 %
+b111 $
+b111 #
+1"
+b10000000 !
+$end
+#2
+b100 !
+b100 %
+b10 #
+b10 $
+#4
+b100000 !
+b100000 %
+b101 #
+b101 $
+#6
+b0 !
+b0 %
+b110 #
+b110 $
+0"
+#8
+b0 #
+b0 $
+#10
+b11 #
+b11 $

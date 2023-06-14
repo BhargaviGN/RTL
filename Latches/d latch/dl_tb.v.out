@@ -1,0 +1,59 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_000001edf08a81d0 .scope module, "dl_tb" "dl_tb" 2 2;
+ .timescale 0 0;
+v000001edf08f5570_0 .var "d", 0 0;
+v000001edf08f5610_0 .var "en", 0 0;
+v000001edf08ab860_0 .net "q", 0 0, v000001edf08f54d0_0;  1 drivers
+S_000001edf08f52a0 .scope module, "d1" "dl" 2 5, 3 1 0, S_000001edf08a81d0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "d";
+    .port_info 1 /INPUT 1 "en";
+    .port_info 2 /OUTPUT 1 "q";
+v000001edf08a66f0_0 .net "d", 0 0, v000001edf08f5570_0;  1 drivers
+v000001edf08f5430_0 .net "en", 0 0, v000001edf08f5610_0;  1 drivers
+v000001edf08f54d0_0 .var "q", 0 0;
+E_000001edf08ace60 .event anyedge, v000001edf08a66f0_0, v000001edf08f5430_0;
+    .scope S_000001edf08f52a0;
+T_0 ;
+    %wait E_000001edf08ace60;
+    %load/vec4 v000001edf08f5430_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_0.0, 8;
+    %load/vec4 v000001edf08a66f0_0;
+    %assign/vec4 v000001edf08f54d0_0, 0;
+T_0.0 ;
+    %jmp T_0;
+    .thread T_0, $push;
+    .scope S_000001edf08a81d0;
+T_1 ;
+    %vpi_call 2 7 "$dumpfile", "dlatch.vcd" {0 0 0};
+    %vpi_call 2 8 "$dumpvars", 32'sb00000000000000000000000000000000, S_000001edf08a81d0 {0 0 0};
+    %delay 2, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001edf08f5570_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001edf08f5610_0, 0, 1;
+    %delay 2, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001edf08f5570_0, 0, 1;
+    %delay 2, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001edf08f5570_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001edf08f5610_0, 0, 1;
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "dl_tb.v";
+    "./dl.v";

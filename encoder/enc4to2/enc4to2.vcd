@@ -1,0 +1,57 @@
+$date
+	Sun Jun 11 14:47:11 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module enc4to2_tb $end
+$var wire 2 ! y [1:0] $end
+$var reg 1 " en $end
+$var reg 4 # in [3:0] $end
+$scope module enc $end
+$var wire 1 " en $end
+$var wire 4 $ in [3:0] $end
+$var reg 2 % y [1:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+bx %
+b1010 $
+b1010 #
+0"
+bx !
+$end
+#2
+b0 !
+b0 %
+b1 #
+b1 $
+1"
+#4
+b11 !
+b11 %
+b1000 #
+b1000 $
+#6
+bz !
+bz %
+b1010 #
+b1010 $
+#8
+b10 !
+b10 %
+b100 #
+b100 $
+#10
+b1 !
+b1 %
+b10 #
+b10 $

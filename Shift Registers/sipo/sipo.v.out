@@ -1,0 +1,113 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_0000029da765b360 .scope module, "sipo" "sipo" 2 1;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "d";
+    .port_info 1 /INPUT 1 "clk";
+    .port_info 2 /OUTPUT 4 "q";
+o0000029da76a6fa8 .functor BUFZ 1, C4<z>; HiZ drive
+v0000029da76ec440_0 .net "clk", 0 0, o0000029da76a6fa8;  0 drivers
+o0000029da76a6fd8 .functor BUFZ 1, C4<z>; HiZ drive
+v0000029da76a31c0_0 .net "d", 0 0, o0000029da76a6fd8;  0 drivers
+v0000029da76a3440_0 .net "q", 3 0, L_0000029da76a3260;  1 drivers
+L_0000029da76a3620 .part L_0000029da76a3260, 3, 1;
+L_0000029da76a3120 .part L_0000029da76a3260, 2, 1;
+L_0000029da76a2ae0 .part L_0000029da76a3260, 1, 1;
+L_0000029da76a3260 .concat8 [ 1 1 1 1], v0000029da76ec3a0_0, v0000029da76ec030_0, v0000029da7656390_0, v0000029da765bd60_0;
+S_0000029da7659da0 .scope module, "d1" "dff" 2 4, 2 11 0, S_0000029da765b360;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "d";
+    .port_info 1 /INPUT 1 "clk";
+    .port_info 2 /OUTPUT 1 "q";
+v0000029da7656950_0 .net "clk", 0 0, o0000029da76a6fa8;  alias, 0 drivers
+v0000029da765b660_0 .net "d", 0 0, o0000029da76a6fd8;  alias, 0 drivers
+v0000029da765bd60_0 .var "q", 0 0;
+E_0000029da765ca60 .event posedge, v0000029da7656950_0;
+S_0000029da7659f30 .scope module, "d2" "dff" 2 5, 2 11 0, S_0000029da765b360;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "d";
+    .port_info 1 /INPUT 1 "clk";
+    .port_info 2 /OUTPUT 1 "q";
+v0000029da765bb00_0 .net "clk", 0 0, o0000029da76a6fa8;  alias, 0 drivers
+v0000029da76562f0_0 .net "d", 0 0, L_0000029da76a3620;  1 drivers
+v0000029da7656390_0 .var "q", 0 0;
+S_0000029da7656430 .scope module, "d3" "dff" 2 6, 2 11 0, S_0000029da765b360;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "d";
+    .port_info 1 /INPUT 1 "clk";
+    .port_info 2 /OUTPUT 1 "q";
+v0000029da76565c0_0 .net "clk", 0 0, o0000029da76a6fa8;  alias, 0 drivers
+v0000029da7656660_0 .net "d", 0 0, L_0000029da76a3120;  1 drivers
+v0000029da76ec030_0 .var "q", 0 0;
+S_0000029da76ec0d0 .scope module, "d4" "dff" 2 7, 2 11 0, S_0000029da765b360;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "d";
+    .port_info 1 /INPUT 1 "clk";
+    .port_info 2 /OUTPUT 1 "q";
+v0000029da76ec260_0 .net "clk", 0 0, o0000029da76a6fa8;  alias, 0 drivers
+v0000029da76ec300_0 .net "d", 0 0, L_0000029da76a2ae0;  1 drivers
+v0000029da76ec3a0_0 .var "q", 0 0;
+    .scope S_0000029da7659da0;
+T_0 ;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000029da765bd60_0, 0, 1;
+    %end;
+    .thread T_0;
+    .scope S_0000029da7659da0;
+T_1 ;
+    %wait E_0000029da765ca60;
+    %load/vec4 v0000029da765b660_0;
+    %assign/vec4 v0000029da765bd60_0, 0;
+    %jmp T_1;
+    .thread T_1;
+    .scope S_0000029da7659f30;
+T_2 ;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000029da7656390_0, 0, 1;
+    %end;
+    .thread T_2;
+    .scope S_0000029da7659f30;
+T_3 ;
+    %wait E_0000029da765ca60;
+    %load/vec4 v0000029da76562f0_0;
+    %assign/vec4 v0000029da7656390_0, 0;
+    %jmp T_3;
+    .thread T_3;
+    .scope S_0000029da7656430;
+T_4 ;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000029da76ec030_0, 0, 1;
+    %end;
+    .thread T_4;
+    .scope S_0000029da7656430;
+T_5 ;
+    %wait E_0000029da765ca60;
+    %load/vec4 v0000029da7656660_0;
+    %assign/vec4 v0000029da76ec030_0, 0;
+    %jmp T_5;
+    .thread T_5;
+    .scope S_0000029da76ec0d0;
+T_6 ;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000029da76ec3a0_0, 0, 1;
+    %end;
+    .thread T_6;
+    .scope S_0000029da76ec0d0;
+T_7 ;
+    %wait E_0000029da765ca60;
+    %load/vec4 v0000029da76ec300_0;
+    %assign/vec4 v0000029da76ec3a0_0, 0;
+    %jmp T_7;
+    .thread T_7;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "sipo.v";
